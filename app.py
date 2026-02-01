@@ -94,9 +94,10 @@ def register():
 
         if password == con_password:
             password = password.strip()
-            if len(password) < 6:
-                flash('Password must be at least 6 characters long!', 'danger')
+            if len(password) < 8:
+                flash('Password must be at least 8 characters long!', 'danger')
                 return redirect(url_for('register'))
+                
             
             hashed_password = password
             new_user = Users(username=username, email=email, hashed_password=hashed_password)
