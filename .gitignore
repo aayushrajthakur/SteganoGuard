@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+static/uploads/
+static/encoded_image/
+static/logo_output/
+.DS_Store
+.idea/
+.vscode/

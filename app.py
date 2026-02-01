@@ -1,22 +1,30 @@
 import glob
 import logging 
+import os
 from flask import Flask, render_template, request, redirect, send_file, url_for, session, flash
 from PIL import Image
-import os
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
-
-
-app = Flask(__name__)
-import os
 from dotenv import load_dotenv
 
-import os
+load_dotenv()
 
-app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql+psycopg2://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
-    f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-)
+app = Flask(__name__)
+
+# Render deployment support
+database_url = os.getenv('DATABASE_URL')
+
+if database_url:
+    # Fix Render's postgres:// prefix for SQLAlchemy
+    if database_url.startswith("postgres://"):
+        database_url = database_url.replace("postgres://", "postgresql://", 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+else:
+    # Local development fallback
+    app.config['SQLALCHEMY_DATABASE_URI'] = (
+        f"postgresql+psycopg2://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+        f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+    )
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
