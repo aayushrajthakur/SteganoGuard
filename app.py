@@ -94,8 +94,8 @@ def register():
 
         if password == con_password:
             password = password.strip()
-            if len(password) < 4:
-                flash('Password must be at least 4 characters long!', 'danger')
+            if len(password) < 6:
+                flash('Password must be at least 6 characters long!', 'danger')
                 return redirect(url_for('register'))
             
             hashed_password = password
