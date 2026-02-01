@@ -1,120 +1,102 @@
 {% extends "base.html" %}
 
-{% block title %}Privacy Policy - Steganography App{% endblock %}
+{% block title %}Privacy Policy - SteganoGuard{% endblock %}
 
 {% block content %}
 <section class="section-padding">
     <div class="container">
-        <h1 class="text-center mb-5">Privacy Policy</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <!-- Information Collection -->
-                <div class="privacy-section mb-4 p-4">
-                    <h3><i class="fas fa-database"></i> Information Collection</h3>
-                    <p>We collect minimal personal information necessary for account creation and service functionality:</p>
-                    <ul>
-                        <li>Username and email address for account management</li>
-                        <li>Encrypted passwords for secure authentication</li>
-                        <li>Temporary storage of images during encoding/decoding process</li>
-                    </ul>
-                </div>
+        <div class="glass-panel p-5 animate-fade-up">
+            <h1 class="text-center mb-5 hero-title" style="font-size: 2.5rem;">Privacy Policy</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <!-- Information Collection -->
+                    <div class="mb-5 animate-fade-up" style="animation-delay: 0.1s">
+                        <div class="d-flex align-items-center mb-3 text-primary">
+                            <i class="fas fa-database fa-2x me-3"></i>
+                            <h3 class="mb-0 text-white">Information Collection</h3>
+                        </div>
+                        <div class="glass-panel p-4 bg-opacity-10" style="background: rgba(255,255,255,0.03);">
+                            <p class="text-secondary">We collect minimal personal information necessary for account
+                                creation and service functionality:</p>
+                            <ul class="text-secondary">
+                                <li class="mb-2">Username and email address for account management</li>
+                                <li class="mb-2">Encrypted passwords for secure authentication</li>
+                                <li class="mb-2">Temporary storage of images during encoding/decoding process</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <!-- Data Usage -->
-                <div class="privacy-section mb-4 p-4">
-                    <h3><i class="fas fa-shield-alt"></i> Data Usage and Protection</h3>
-                    <p>Your privacy and data security are our top priorities:</p>
-                    <ul>
-                        <li>All uploaded images are automatically deleted after processing</li>
-                        <li>We never store your encoded messages or decryption passwords</li>
-                        <li>Your personal information is protected using industry-standard encryption</li>
-                        <li>We do not share or sell any user data to third parties</li>
-                    </ul>
-                </div>
+                    <!-- Data Usage -->
+                    <div class="mb-5 animate-fade-up" style="animation-delay: 0.2s">
+                        <div class="d-flex align-items-center mb-3 text-success">
+                            <i class="fas fa-shield-alt fa-2x me-3"></i>
+                            <h3 class="mb-0 text-white">Data Usage and Protection</h3>
+                        </div>
+                        <div class="glass-panel p-4 bg-opacity-10" style="background: rgba(255,255,255,0.03);">
+                            <p class="text-secondary">Your privacy and data security are our top priorities:</p>
+                            <ul class="text-secondary">
+                                <li class="mb-2">All uploaded images are automatically deleted after processing</li>
+                                <li class="mb-2">We never store your encoded messages or decryption passwords</li>
+                                <li class="mb-2">Your personal information is protected using industry-standard
+                                    encryption</li>
+                                <li class="mb-2">We do not share or sell any user data to third parties</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <!-- User Rights -->
-                <div class="privacy-section mb-4 p-4">
-                    <h3><i class="fas fa-user-shield"></i> Your Rights</h3>
-                    <p>As a user, you have the right to:</p>
-                    <ul>
-                        <li>Access your personal data</li>
-                        <li>Request deletion of your account and associated data</li>
-                        <li>Opt-out of non-essential communications</li>
-                        <li>Request a copy of your data</li>
-                    </ul>
-                </div>
+                    <!-- User Rights -->
+                    <div class="mb-5 animate-fade-up" style="animation-delay: 0.3s">
+                        <div class="d-flex align-items-center mb-3 text-warning">
+                            <i class="fas fa-user-shield fa-2x me-3"></i>
+                            <h3 class="mb-0 text-white">Your Rights</h3>
+                        </div>
+                        <div class="glass-panel p-4 bg-opacity-10" style="background: rgba(255,255,255,0.03);">
+                            <p class="text-secondary">As a user, you have the right to:</p>
+                            <ul class="text-secondary">
+                                <li class="mb-2">Access your personal data</li>
+                                <li class="mb-2">Request deletion of your account and associated data</li>
+                                <li class="mb-2">Opt-out of non-essential communications</li>
+                                <li class="mb-2">Request a copy of your data</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <!-- Cookies -->
-                <div class="privacy-section mb-4 p-4">
-                    <h3><i class="fas fa-cookie-bite"></i> Cookies</h3>
-                    <p>We use essential cookies to:</p>
-                    <ul>
-                        <li>Maintain your session security</li>
-                        <li>Remember your login status</li>
-                        <li>Improve website functionality</li>
-                    </ul>
-                </div>
+                    <!-- Cookies -->
+                    <div class="mb-5 animate-fade-up" style="animation-delay: 0.4s">
+                        <div class="d-flex align-items-center mb-3 text-info">
+                            <i class="fas fa-cookie-bite fa-2x me-3"></i>
+                            <h3 class="mb-0 text-white">Cookies</h3>
+                        </div>
+                        <div class="glass-panel p-4 bg-opacity-10" style="background: rgba(255,255,255,0.03);">
+                            <p class="text-secondary">We use essential cookies to:</p>
+                            <ul class="text-secondary">
+                                <li class="mb-2">Maintain your session security</li>
+                                <li class="mb-2">Remember your login status</li>
+                                <li class="mb-2">Improve website functionality</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <!-- Contact Information -->
-                <div class="privacy-section mb-4 p-4">
-                    <h3><i class="fas fa-envelope"></i> Contact Us</h3>
-                    <p>If you have any questions about our privacy policy or data practices, please contact us:</p>
-                    <ul>
-                        <li>Email: privacy@steganoguard.com</li>
-                        <li>Through our <a href="{{ url_for('about_us') }}">contact form</a></li>
-                    </ul>
+                    <!-- Contact Information -->
+                    <div class="animate-fade-up" style="animation-delay: 0.5s">
+                        <div class="d-flex align-items-center mb-3 text-secondary">
+                            <i class="fas fa-envelope fa-2x me-3"></i>
+                            <h3 class="mb-0 text-white">Contact Us</h3>
+                        </div>
+                        <div class="glass-panel p-4 bg-opacity-10" style="background: rgba(255,255,255,0.03);">
+                            <p class="text-secondary">If you have any questions about our privacy policy or data
+                                practices, please contact us:</p>
+                            <ul class="list-unstyled text-secondary">
+                                <li class="mb-2"><i class="fas fa-at me-2"></i>Email: privacy@steganoguard.com</li>
+                                <li><i class="fas fa-paper-plane me-2"></i>Through our <a
+                                        href="{{ url_for('about_us') }}"
+                                        class="text-primary text-decoration-none">contact form</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<style>
-    .privacy-section {
-        background: #f8f9fa;
-        padding: 25px;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-    }
-
-    .privacy-section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .privacy-section h3 {
-        color: #007bff;
-        margin-bottom: 20px;
-    }
-
-    .privacy-section i {
-        margin-right: 10px;
-    }
-
-    .privacy-section ul {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-
-    .privacy-section ul li {
-        margin-bottom: 10px;
-        position: relative;
-    }
-
-    .privacy-section ul li:before {
-        content: "•";
-        color: #007bff;
-        font-weight: bold;
-        position: absolute;
-        left: -15px;
-    }
-
-    .privacy-section a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .privacy-section a:hover {
-        text-decoration: underline;
-    }
-</style>
 {% endblock %}

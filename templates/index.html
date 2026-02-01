@@ -1,29 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}SteganoGuard - Secure Image Steganography{% endblock %}
+{% block title %}SteganoGuard - Next Gen Security{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 hero-content">
-                <h1 class="hero-title animate-fade-in">Secure Your Messages with SteganoGuard</h1>
-                <p class="hero-text animate-fade-in">Hide confidential messages within images using advanced steganography. Military-grade security meets user-friendly design.</p>
-                <div class="hero-buttons animate-fade-in">
+            <div class="col-lg-6 hero-content animate-fade-up">
+                <div class="d-inline-block px-3 py-1 mb-3 rounded-pill"
+                    style="background: rgba(79, 70, 229, 0.1); border: 1px solid rgba(79, 70, 229, 0.2); color: var(--accent);">
+                    <small><i class="fas fa-bolt me-1"></i> Powerful Encryption</small>
+                </div>
+                <h1 class="hero-title">Invisible Security for Your Data</h1>
+                <p class="hero-text">Hide confidential messages within images using military-grade steganography.
+                    Simple, secure, and completely private.</p>
+                <div class="hero-buttons d-flex gap-3">
                     {% if 'username' not in session %}
-                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg me-3">Get Started</a>
-                    <a href="{{ url_for('about_us') }}" class="btn btn-outline-light btn-lg">Learn More</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">
+                        Get Started <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="#features" class="btn btn-outline-light btn-lg">Learn More</a>
                     {% else %}
-                    <a href="{{ url_for('encode') }}" class="btn btn-primary btn-lg me-3">Start Encoding</a>
-                    <a href="{{ url_for('decode') }}" class="btn btn-outline-light btn-lg">Decode Message</a>
+                    <a href="{{ url_for('encode') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-lock me-2"></i>Start Encoding
+                    </a>
                     {% endif %}
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
-                <div class="hero-image animate-float">
-<img src="https://img.freepik.com/premium-vector/artificial-intelligence-banner-with-outline-icons-robotics-chatbot-database-horizontal-banner_121070-885.jpg?w=360" alt="SteganoGuard" class="img-fluid">
-
+                <div class="hero-image glass-panel p-3 animate-float">
+                    <img src="https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg"
+                        alt="Security Illustration" class="img-fluid rounded-3" style="width: 100%;">
                 </div>
             </div>
         </div>
@@ -31,299 +39,70 @@
 </section>
 
 <!-- Features Section -->
-<section class="features-section">
+<section id="features" class="section-padding">
     <div class="container">
-        <div class="section-header text-center">
-            <h2>Why Choose SteganoGuard?</h2>
-            <p class="lead">Advanced security features designed for your privacy</p>
+        <div class="text-center mb-5 animate-fade-up">
+            <h2 class="display-4 fw-bold">Why SteganoGuard?</h2>
+            <p class="text-muted lead">Advanced technology meets user-friendly design</p>
         </div>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="feature-card">
+                <div class="feature-card glass-panel">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Military-Grade Security</h3>
-                    <p>Advanced steganography algorithms ensure your messages remain completely hidden and secure.</p>
+                    <h3>Military-Grade</h3>
+                    <p class="text-secondary">AES-256 encryption ensures that even if the image is intercepted, your
+                        message remains unbreakable.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-card">
+                <div class="feature-card glass-panel">
                     <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Password Protection</h3>
-                    <p>Add an extra layer of security with optional password protection for your hidden messages.</p>
+                    <h3>Instant Processing</h3>
+                    <p class="text-secondary">Our optimized algorithms encode and decode your messages in milliseconds,
+                        all within your browser.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-card">
+                <div class="feature-card glass-panel">
                     <div class="feature-icon">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-user-secret"></i>
                     </div>
-                    <h3>Complete Privacy</h3>
-                    <p>Your data never leaves your device - all processing is done locally for maximum privacy.</p>
+                    <h3>Zero Trace</h3>
+                    <p class="text-secondary">We don't store your images or messages. Everything is processed locally
+                        for maximum privacy.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- How It Works Section -->
-<section class="how-it-works-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2>How It Works</h2>
-            <p class="lead">Simple steps to secure your messages</p>
-        </div>
-        <div class="row g-4">
+<!-- Stats Section -->
+<section class="section-padding position-relative overflow-hidden">
+    <div class="container position-relative z-1">
+        <div class="row g-4 text-center">
             <div class="col-md-4">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-upload"></i>
-                    </div>
-                    <h3>Upload Image</h3>
-                    <p>Choose any image as your carrier file. We support various image formats including PNG and JPG.</p>
+                <div class="p-4">
+                    <div class="display-4 fw-bold text-gradient mb-2">10k+</div>
+                    <div class="text-muted">Secure Messages</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-keyboard"></i>
-                    </div>
-                    <h3>Enter Message</h3>
-                    <p>Type your secret message and optionally secure it with a password for added protection.</p>
+                <div class="p-4">
+                    <div class="display-4 fw-bold text-gradient mb-2">99.9%</div>
+                    <div class="text-muted">Uptime</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <h3>Share Securely</h3>
-                    <p>Download your encoded image and share it securely with your intended recipient.</p>
+                <div class="p-4">
+                    <div class="display-4 fw-bold text-gradient mb-2">0</div>
+                    <div class="text-muted">Data Breaches</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Statistics Section -->
-<section class="stats-section">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="stat-card">
-                    <div class="stat-number">100K+</div>
-                    <div class="stat-label">Messages Encoded</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-card">
-                    <div class="stat-number">50K+</div>
-                    <div class="stat-label">Active Users</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-card">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="container text-center">
-        <h2>Ready to Secure Your Messages?</h2>
-        <p class="lead mb-4">Join thousands of users who trust SteganoGuard for their secure communication needs.</p>
-        {% if 'username' not in session %}
-        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Create Free Account</a>
-        {% else %}
-        <a href="{{ url_for('encode') }}" class="btn btn-primary btn-lg">Start Encoding Now</a>
-        {% endif %}
-    </div>
-</section>
-
-<style>
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    color: white;
-    padding: 120px 0 100px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.hero-text {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.hero-image {
-    position: relative;
-    z-index: 2;
-}
-
-/* Features Section */
-.features-section {
-    padding: 100px 0;
-    background: #f8f9fa;
-}
-
-.section-header {
-    margin-bottom: 60px;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1a2a6c;
-    margin-bottom: 1rem;
-}
-
-.feature-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    height: 100%;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #1a2a6c;
-    margin-bottom: 20px;
-}
-
-/* How It Works Section */
-.how-it-works-section {
-    padding: 100px 0;
-    background: white;
-}
-
-.step-card {
-    text-align: center;
-    padding: 40px 30px;
-    border-radius: 15px;
-    background: #f8f9fa;
-    position: relative;
-    height: 100%;
-}
-
-.step-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: #1a2a6c;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.step-icon {
-    font-size: 2rem;
-    color: #1a2a6c;
-    margin: 20px 0;
-}
-
-/* Statistics Section */
-.stats-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
-    color: white;
-}
-
-.stat-card {
-    text-align: center;
-    padding: 30px;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 1.25rem;
-    opacity: 0.9;
-}
-
-/* CTA Section */
-.cta-section {
-    padding: 100px 0;
-    background: #f8f9fa;
-}
-
-/* Animations */
-.animate-fade-in {
-    animation: fadeIn 1s ease-out;
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991.98px) {
-    .hero-section {
-        padding: 80px 0;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .stat-card {
-        margin-bottom: 30px;
-    }
-}
-</style>
 {% endblock %}
