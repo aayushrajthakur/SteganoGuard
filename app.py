@@ -37,13 +37,22 @@ db = SQLAlchemy(app)
 
 class Users(db.Model):
     id = db.Column(db.Integer,primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
-    email = db.Column(db.String(20), nullable=False)
+    username = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(120), nullable=False)
     hashed_password = db.Column(db.String(1200), nullable=False)
 
 # Create database tables if they don't exist
 with app.app_context():
     db.create_all()
+
+@app.route('/reset_db')
+def reset_db():
+    try:
+        db.drop_all()
+        db.create_all()
+        return "Database reset successfully! Tables dropped and recreated with new schema."
+    except Exception as e:
+        return f"Error resetting database: {str(e)}"
 
 @app.route('/')
 def index():
