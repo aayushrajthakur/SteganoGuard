@@ -10,20 +10,34 @@
                 <h2 class="text-center mb-4">Welcome, {{ username }}!</h2>
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow">
-                            <div class="card-body p-4">
-                                <h5 class="card-title">Encode Message</h5>
-                                <p class="card-text">Hide your secret message within an image.</p>
-                                <a href="{{ url_for('encode') }}" class="btn btn-primary">Encode Message</a>
+                        <div class="glass-panel h-100 p-4 animate-fade-up" style="animation-delay: 0.1s;">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-3">
+                                    <i class="fas fa-lock fa-2x text-primary p-3 rounded-circle"
+                                        style="background: rgba(79, 70, 229, 0.1);"></i>
+                                </div>
+                                <h4 class="mb-3">Encode Message</h4>
+                                <p class="text-secondary flex-grow-1">Hide your secret message within an image securely
+                                    using steganography.</p>
+                                <a href="{{ url_for('encode') }}" class="btn btn-primary w-100 mt-3">
+                                    Start Encoding <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow">
-                            <div class="card-body p-4">
-                                <h5 class="card-title">Decode Message</h5>
-                                <p class="card-text">Extract hidden messages from encoded images.</p>
-                                <a href="{{ url_for('decode') }}" class="btn btn-primary">Decode Message</a>
+                        <div class="glass-panel h-100 p-4 animate-fade-up" style="animation-delay: 0.2s;">
+                            <div class="d-flex flex-column h-100">
+                                <div class="mb-3">
+                                    <i class="fas fa-unlock fa-2x text-secondary p-3 rounded-circle"
+                                        style="background: rgba(236, 72, 153, 0.1);"></i>
+                                </div>
+                                <h4 class="mb-3">Decode Message</h4>
+                                <p class="text-secondary flex-grow-1">Extract and read hidden messages from your encoded
+                                    images.</p>
+                                <a href="{{ url_for('decode') }}" class="btn btn-outline-light w-100 mt-3">
+                                    Start Decoding <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
