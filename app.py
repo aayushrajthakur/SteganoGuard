@@ -41,6 +41,10 @@ class Users(db.Model):
     email = db.Column(db.String(20), nullable=False)
     hashed_password = db.Column(db.String(1200), nullable=False)
 
+# Create database tables if they don't exist
+with app.app_context():
+    db.create_all()
+
 @app.route('/')
 def index():
     return render_template('index.html')
